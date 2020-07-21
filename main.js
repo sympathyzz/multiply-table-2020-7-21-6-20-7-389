@@ -17,12 +17,19 @@ function printMultiplyTable(start,end){
     var result='';
     for(var i=start;i<=end;i++){
         for(var j=start;j<=i;j++){
-           result+=j+'*'+i+'='+j*i+'  ';
+            if(j!==i){
+                result+=j+'*'+i+'='+j*i+'\t';
+            }else {
+                result+=j+'*'+i+'='+j*i;
+            }
+
         }
-        result+='\n';
+        if(i!==end){
+            result+='\n';
+        }
     }
     return result;
 }
 
 
-module.exports = printMultiplyTableByRange;
+module.exports = {printMultiplyTableByRange};
