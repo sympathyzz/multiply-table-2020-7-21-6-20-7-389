@@ -14,9 +14,9 @@ function isValid(start,end){
 }
 
 function printMultiplyTable(start,end){
-    var result='';
-    for(var i=start;i<=end;i++){
-        for(var j=start;j<=i;j++){
+    let result='';
+    for(let i=start;i<=end;i++){
+        for(let j=start;j<=i;j++){
             if(j!==i){
                 result+=j+'*'+i+'='+j*i+'\t';
             }else {
